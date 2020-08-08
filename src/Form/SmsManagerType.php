@@ -32,7 +32,7 @@ final class SmsManagerType extends AbstractResourceType
 			])
 			->add('gateway', ChoiceType::class, [
 				'label' => 'mango-sylius.admin.form.smsManager.gateway',
-				'required' => true,
+				'required' => false,
 				'choices' => [
 					SmsManagerInterface::GATEWAY_LOWCOST => SmsManagerInterface::GATEWAY_LOWCOST,
 					SmsManagerInterface::GATEWAY_ECONOMY => SmsManagerInterface::GATEWAY_ECONOMY,

@@ -23,7 +23,7 @@ class SmsManager implements SmsManagerInterface, ResourceInterface
 	private $id;
 
 	/**
-	 * @var string
+	 * @var string|null
 	 * @ORM\Column(type="string", name="gateway", nullable=true)
 	 */
 	private $gateway = SmsManagerInterface::GATEWAY_LOWCOST;
@@ -52,12 +52,12 @@ class SmsManager implements SmsManagerInterface, ResourceInterface
 		return $this->id;
 	}
 
-	public function getGateway(): string
+	public function getGateway(): ?string
 	{
 		return $this->gateway;
 	}
 
-	public function setGateway(string $gateway): void
+	public function setGateway(?string $gateway): void
 	{
 		$this->gateway = $gateway;
 	}

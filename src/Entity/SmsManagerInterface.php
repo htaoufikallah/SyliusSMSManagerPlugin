@@ -10,7 +10,7 @@ interface SmsManagerInterface
 	public const GATEWAY_ECONOMY = 'economy';
 	public const GATEWAY_LOWCOST = 'lowcost';
 
-	public function getGateway(): string;
+	public function getGateway(): ?string;
 
 	public function getApikey(): ?string;
 
